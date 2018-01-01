@@ -3,6 +3,11 @@ Following previous example, I need less manual work and I like to delegate tasks
 
 The "net/url" package looks like perfect fit for the job.
 
+## Expectations
+
+Provided FQDN URL must be fully recognised, all RFC parts were defined and usable for later stages in the app.
+Functional tests can be created.
+
 ## Result
 
 No schema provided

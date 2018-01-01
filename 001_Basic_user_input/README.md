@@ -9,6 +9,10 @@ Such binaries must act upon user input, like:
 
 Also, all parameters must be logged to the stdout.
 
+## Expectations
+
+The program must read user input and print it to the stdout. No tests were used and nothing is stored in the long term.
+
 ## Result
 ```golang
 » go run main.go
