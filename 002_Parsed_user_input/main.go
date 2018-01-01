@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"log"
 	"net/url"
@@ -23,7 +24,11 @@ func main() {
 	fmt.Print("Enter service URL in the FQDN:port/path format: ")
 	fmt.Scanln(&rawurl)
 
-	parsedRawURL := handleInputURL(rawurl)
+	parsedRawURL, err := handleInputURL(rawurl)
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
 
 	fmt.Println("Parsed data follows...")
 
@@ -37,19 +42,22 @@ func main() {
 
 // hndles raw URL parsing and ensures that required parts are defined
 // and delivered as an parsedURL struct
-func handleInputURL(rawurl string) parsedURL {
+func handleInputURL(rawurl string) (parsed parsedURL, err error) {
 	// parse URL
 	s, err := url.Parse(rawurl)
 	if err != nil {
 		log.Fatal(err)
+		return parsedURL{}, err
 	}
 
 	if !s.IsAbs() {
 		log.Fatal("URL scheme not provided!")
+		return parsedURL{}, errors.New("URL scheme not provided")
 	}
 
 	if s.Hostname() == "" {
 		log.Fatal("Hostname is not recognised!")
+		return parsedURL{}, errors.New("Hostname is not recognised")
 	}
 
 	var p = parsedURL{
@@ -60,5 +68,5 @@ func handleInputURL(rawurl string) parsedURL {
 		s.String(),
 	}
 
-	return p
+	return p, nil
 }
