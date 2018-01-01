@@ -8,3 +8,12 @@ Such binaries must act upon user input, like:
 * etc
 
 Also, all parameters must be logged to the stdout.
+
+## Result
+```golang
+» go run main.go
+Enter server address: some.server.com
+Enter server port: 32035
+Enter API path: service-name
+http://some.server.com:32035/service-name
+```
