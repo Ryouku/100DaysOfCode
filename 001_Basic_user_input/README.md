@@ -13,7 +13,10 @@ Also, all parameters must be logged to the stdout.
 ```golang
 » go run main.go
 Enter server address: some.server.com
-Enter server port: 32035
-Enter API path: service-name
-http://some.server.com:32035/service-name
+2018/01/01 20:26:28 Entered: some.server.com
+Enter server port: 32003
+2018/01/01 20:26:31 Entered: 32003
+Enter API path: some-service
+2018/01/01 20:26:37 Entered: some-service
+http://some.server.com:32003/some-service
 ```
