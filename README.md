@@ -9,7 +9,15 @@ Inspiration by [100 days of code/ Alexander Kallaway](http://100daysofcode.com).
 * To shift thinking and problem solving in different way
 * To share my experience with others
 
-Twitter:
+## Background
+* 10+ years of PHP and WEB development
+* 2+ years on Kubernetes
+* 2+ years on Docker
+* Cisco CCNA courses
+* 6+ years on Oracle PL/SQL development
+
+
+### Twitter
 #100DaysOfCode
 
 ### Go environment used
