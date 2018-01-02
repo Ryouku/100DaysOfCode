@@ -29,7 +29,7 @@ As a bonus, `flag` and `os` packages can be combined together and `flag` input d
 
 ## Update
 
-Added ENV varibales to reflect the possibility, as provided default value:
+Added ENV variables to reflect the possibility, as provided default value:
 
 ```shell
 » go run main.go
