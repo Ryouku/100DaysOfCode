@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/Ryouku/100DaysOfCode)](https://goreportcard.com/report/github.com/Ryouku/100DaysOfCode)
+
 # 100DaysOfCode
 
 Inspiration by [100 days of code / Alexander Kallaway](http://100daysofcode.com).
