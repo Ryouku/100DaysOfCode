@@ -1,6 +1,6 @@
 # 100DaysOfCode
 
-Inspiration by [100 days of code/ Alexander Kallaway](http://100daysofcode.com).
+Inspiration by [100 days of code / Alexander Kallaway](http://100daysofcode.com).
 
 ## Motivation
 
