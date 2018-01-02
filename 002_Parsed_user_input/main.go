@@ -8,8 +8,7 @@ import (
 )
 
 var (
-	rawurl       string
-	parsedRawURL parsedURL
+	rawurl string
 )
 
 type parsedURL struct {
@@ -22,13 +21,12 @@ type parsedURL struct {
 
 func main() {
 	fmt.Print("Enter service URL in the FQDN:port/path format: ")
-	fmt.Scanln(&rawurl)
+
+	_, err := fmt.Scanln(&rawurl)
+	checkErr(err)
 
 	parsedRawURL, err := handleInputURL(rawurl)
-	if err != nil {
-		log.Fatal(err)
-		return
-	}
+	checkErr(err)
 
 	fmt.Println("Parsed data follows...")
 
@@ -69,4 +67,11 @@ func handleInputURL(rawurl string) (parsed parsedURL, err error) {
 	}
 
 	return p, nil
+}
+
+// error checker helper
+func checkErr(err error) {
+	if err != nil {
+		log.Fatal("ERROR:", err)
+	}
 }

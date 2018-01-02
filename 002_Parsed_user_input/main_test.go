@@ -1,6 +1,8 @@
 package main
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestHandleInputURL(t *testing.T) {
 	testRawURL := "http://some.server.com"
@@ -8,6 +10,10 @@ func TestHandleInputURL(t *testing.T) {
 	path, err := handleInputURL(testRawURL)
 	if err != nil {
 		t.Fatal(err)
+	}
+
+	if (parsedURL{}) == path {
+		t.Error("Empty struct returned")
 	}
 
 	if path.schema != "http" {
