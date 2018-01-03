@@ -11,7 +11,8 @@ To try and understand the possibilities of various Go func types.
 ```shell
 » go run main.go
 [1 10 1000] 1011
-[1.1 10.1 1000.5] 1011.7
+0
+[1.1 10.1 1000.5] [10.1] [] 1011.7
 hahaha
 [10 15 20.5 20.1 10]
 10 int
