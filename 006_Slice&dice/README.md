@@ -34,5 +34,6 @@ Array x [1 2 3 4 5 6 7 10] [8]int
 8
 Array c [6 7 10] []int 3
 Array x [1 2 3 4 5 6 33 10] [8]int
-Array vv &[1 2 1000 4 5 6 33 10] *[8]int
+Array vv [1 2 1000 4 5 6 33 10] []int
+Array vX [1 2 3 4 5 6 33 10] [8]int
 ```

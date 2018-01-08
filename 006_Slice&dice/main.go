@@ -137,8 +137,10 @@ func main() {
 	fmt.Println("Array x", x, reflect.TypeOf(x))
 
 	// copy of array
-	vv := &x
+	vv := make([]int, len(x))
+	// append(vv, x[:])
+	copy(vv, x[:])
 	vv[2] = 1000
 	fmt.Println("Array vv", vv, reflect.TypeOf(vv))
-
+	fmt.Println("Array vX", x, reflect.TypeOf(x))
 }
