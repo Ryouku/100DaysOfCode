@@ -30,4 +30,9 @@ Map i1: 134.56 float64
 Map i1: 18934.56 float64
 Map: map[] map[int]map[int]float64
 Map: map[4563728:map[1:12.3 2:112.3 3:132.3]] map[int]map[int]float64
+Array x [1 2 3 4 5 6 7 10] [8]int
+8
+Array c [6 7 10] []int 3
+Array x [1 2 3 4 5 6 33 10] [8]int
+Array vv &[1 2 1000 4 5 6 33 10] *[8]int
 ```

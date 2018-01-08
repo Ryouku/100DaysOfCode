@@ -121,4 +121,24 @@ func main() {
 
 	fmt.Println("Map:", invoiceList, reflect.TypeOf(invoiceList))
 
+	// data manipulations
+
+	// dynamic size array
+	x := [...]int{1, 2, 3, 4, 5, 6, 7, 10}
+	fmt.Println("Array x", x, reflect.TypeOf(x))
+	fmt.Println(cap(x))
+
+	// slice from array
+	c := x[5:]
+	fmt.Println("Array c", c, reflect.TypeOf(c), cap(c))
+
+	// modify original(!) array value by using slice
+	c[1] = 33
+	fmt.Println("Array x", x, reflect.TypeOf(x))
+
+	// copy of array
+	vv := &x
+	vv[2] = 1000
+	fmt.Println("Array vv", vv, reflect.TypeOf(vv))
+
 }
